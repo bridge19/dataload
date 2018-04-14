@@ -1,4 +1,4 @@
-package com.xy.service.impl;
+package com.xy.logload.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Service;
 
-import com.xy.domain.User;
-import com.xy.service.UserService;
+import com.xy.logload.domain.User;
+import com.xy.logload.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl implements UserService, InitializingBean{

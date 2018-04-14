@@ -1,4 +1,4 @@
-package com.xy.service.impl;
+package com.xy.logload.service.impl;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,8 +26,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StreamUtils;
 
-import com.xy.service.FileDownloadService;
-import com.xy.util.HttpClientPool;
+import com.xy.logload.service.FileDownloadService;
+import com.xy.logload.util.HttpClientPool;
 
 @Service("fileDownloadService")
 public class FileDownloadServiceImpl implements FileDownloadService {

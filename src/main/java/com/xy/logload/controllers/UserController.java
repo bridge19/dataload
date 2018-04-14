@@ -1,7 +1,8 @@
-package com.xy.controllers;
+package com.xy.logload.controllers;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.xy.domain.BaseResult;
-import com.xy.domain.User;
-import com.xy.service.FileDownloadService;
+import com.xy.logload.domain.BaseResult;
+import com.xy.logload.domain.User;
+import com.xy.logload.service.FileDownloadService;
 
 @Controller
 public class UserController {
@@ -28,8 +29,9 @@ public class UserController {
 	public BaseResult<List<String>> getFileList(@RequestParam("projectName") String projectName,
 												@RequestParam("fileName") String fileName,
 												@RequestParam("logDate") String logDate){
-		return new BaseResult<List<String>>(true,"",fileDownloadService.getFileList(projectName, fileName, logDate),"");
-	}
+//		return new BaseResult<List<String>>(true,"",fileDownloadService.getFileList(projectName, fileName, logDate),"");
+		return new BaseResult<List<String>>(true,"",Arrays.asList(new String[]{"out.log"}),"");
+		}
 	
 	@RequestMapping(value="/loadData", method= RequestMethod.GET)
 	public void loadData(HttpServletRequest request, HttpServletResponse response){

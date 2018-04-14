@@ -1,8 +1,8 @@
-package com.xy.service;
+package com.xy.logload.service;
 
 import java.util.List;
 
-import com.xy.domain.User;
+import com.xy.logload.domain.User;
 
 public interface UserService {
 

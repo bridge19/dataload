@@ -1,4 +1,4 @@
-package com.xy.domain;
+package com.xy.logload.domain;
 
 import java.io.Serializable;
 
